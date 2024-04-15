@@ -5,7 +5,7 @@ WORKDIR /app
 COPY package.json yarn.lock ./
 RUN yarn 
 COPY . .
-yarn build
+RUN yarn build
 
 COPY next.config.js ./next.config.js
 
