@@ -14,8 +14,8 @@ const services = () => {
 	return (
 		<>
 			<Head>
-				<title>Services - ITRocket</title>
-				<meta name='description' content='ITRocket 🚀 | Crypto Multipurpose Project' />
+				<title>Services - zkNodes</title>
+				<meta name='description' content='zkNodes | node Project' />
 			</Head>
 
 			<Header />
