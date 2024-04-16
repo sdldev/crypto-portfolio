@@ -4,7 +4,6 @@ import Link from 'next/link'
 
 import Header from '@components/Header'
 import styles from '@styles/Services.module.scss'
-import { Alert } from 'antd'
 import projects from 'data/projects'
 
 let mainnetData = projects.mainnet
@@ -73,31 +72,6 @@ const services = () => {
 									</Link>
 								)
 							})}
-						</div>
-						<h2 id='delegate' className='mt-20'>
-							Validator links
-						</h2>
-						<div>
-							<Alert
-								message=<span>
-									ITRocket participates in{' '}
-									<span
-										className='inline-block h-5 w-5 align-top mx-1 lg:mt-[2px]'
-										aria-hidden='true'
-										style={{ background: "center / contain url('/testnet/eigenlayer.jpeg')  no-repeat" }}
-									></span>{' '}
-									EigenLayer testnet. Please consider staking to our{' '}
-									<a href={testnetData.eigenlayer.delegate} target='_blank' rel='noopener noreferrer'>
-										operator
-									</a>{' '}
-									to boost your earnings and support us 🚀
-								</span>
-								type='info'
-								showIcon
-								className='mt-1 mb-3 lg:mb-6 max-w-fit'
-							/>
-							<span>All ITRocket validator links - </span>
-							<Link href='/delegate'>https://itrocket.net/delegate</Link>
 						</div>
 					</div>
 				</div>
