@@ -53,7 +53,7 @@ const CheatSheet = props => {
 		<AnimatedSection>
 			<Head>
 				<title>{`Installation - ${projectName} | Services`}</title>
-				<meta name='description' content='ITRocket 🚀 | Crypto Multipurpose Project' />
+				<meta name='description' content='zkNodes Project' />
 			</Head>
 
 			<div

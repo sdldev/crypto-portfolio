@@ -1,12 +1,10 @@
 import { useContext, useEffect, useState } from 'react'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
-import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Tabs } from 'antd'
 
 import Header from '@components/Header'
-import ParticlesBG from '@components/ParticlesBG/ParticlesBG'
 import { Context } from '@context/context'
 import { smoothScroll } from '@utils/smoothScroll'
 import { opacityBlock } from '@data/transitions'
@@ -16,7 +14,6 @@ import Spinner from '@components/UI/Spinner'
 import styles from '@styles/Home.module.scss'
 import Card from '@components/UI/Card'
 const Footer = dynamic(() => import('@components/Footer'))
-const Accordion = dynamic(() => import('@components/UI/Accordion.jsx'))
 const FloatButton = dynamic(() => import('@components/UI/FloatButton'))
 
 export async function getStaticProps() {
@@ -60,7 +57,7 @@ const Home = () => {
 			testnet: Object.entries(projects.testnet)?.length
 		}))
 
-		console.log('%cITRocket 🚀', 'color: purple; font-size: 38px;')
+		console.log('%czkNodes.org', 'color: red; font-size: 24px;')
 
 		if (document.readyState === 'complete') {
 			onPageLoad()
@@ -111,14 +108,14 @@ const Home = () => {
 	return (
 		<>
 			<Head>
-				<title>ITRocket - Trusted Validator &amp; Interchain Utility Provider!</title>
+				<title>zkNodes project</title>
 				<meta
 					name='description'
-					content='ITRocket 🚀 - Crypto multipurpose project focused on providing best services for Cosmos (and not only) node operators'
+					content='zkNodes.org Fair working with team and as a partner for digitalization, we have have best service for community.'
 				/>
 				<meta
 					name='keywords'
-					content='ITRocket, it rocket, validator, cosmos, cosmos installation, nodes, blockchain'
+					content='cosmos, cosmos installation, nodes, blockchain'
 				/>
 			</Head>
 			<Header />
@@ -128,10 +125,9 @@ const Home = () => {
 				<section
 					className={styles.hero}
 					style={{
-						backgroundColor: theme === 'dark' ? '#171717' : ' #fff'
+						backgroundColor: theme === 'dark' ? '#0e121f' : ' #fff'
 					}}
 				>
-					<ParticlesBG />
 					<div className={styles.container}>
 						<motion.div
 							initial='hidden'
@@ -142,28 +138,11 @@ const Home = () => {
 							<div className={styles.hero__column} id={styles.hero__descStaking}>
 								<div className={styles.hero__columnRoot}>
 									<h1 className='font-bold  mb-[15px] text-[26px] md:text-[38px] lg:text-[50px]'>
-										Trusted Validator &amp; Interchain Utility Provider
+										zkNodes
 									</h1>
 									<span className={styles.hero__desc}>
-										With few simple steps you can delegate funds to our trusted validators or explore our
-										services where you can find tools that will be useful for node operators and
-										developers.
+									Fair working with team and as a partner for digitalization, we have have best service for community
 									</span>
-								</div>
-								<div className={styles.hero__links}>
-									<Link
-										href='#networks'
-										className={styles.button}
-										onClick={e => smoothScroll(e, 'networks')}
-									>
-										Delegate
-									</Link>
-									<Link
-										href='/services'
-										className={theme === 'light' ? styles.button : styles.button__dark}
-									>
-										Services
-									</Link>
 								</div>
 							</div>
 						</motion.div>
@@ -185,20 +164,6 @@ const Home = () => {
 						<Tabs type='card' defaultActiveKey='1' size={'large'} items={items} />
 					</div>
 				</motion.section>
-
-				<section className='bg-white dark:bg-[#191919]'>
-					<div className={styles.container}>
-						<div className={styles.accordion__wrapper}>
-							<h3
-								className='text-[22px] md:text-[42px] font-bold  mb-1 md:mb-3 tracking-wide text-zinc-900 dark:text-white'
-								id='faq'
-							>
-								Frequently Asked Questions
-							</h3>
-							<Accordion />
-						</div>
-					</div>
-				</section>
 			</main>
 
 			<Footer />

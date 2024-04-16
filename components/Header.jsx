@@ -44,18 +44,11 @@ const Header = () => {
 					setIsOpen(!isOpen)
 				}}
 			>
-				<a href='https://mainnet.itrocket.net/'>Mainnet</a>
-				<a href='https://testnet.itrocket.net/'>Testnet</a>
+				<a href='https://mainnet.zknodes.org'>Mainnet</a>
+				<a href='https://testnet.zknodes.org'>Testnet</a>
 			</div>
 		</div>,
-		<Link
-			href='/#faq'
-			onClick={() => {
-				setIsOpen(!isOpen)
-			}}
-		>
-			FAQ
-		</Link>,
+
 		<div className={styles.switch__wrapper} style={{ backgroundColor: theme === 'dark' ? '#222' : '#f6f6f7' }}>
 			<span>Appearance:</span>
 			<div className={styles.switch} data-ison={theme === 'dark'} onClick={toggleTheme}>
@@ -110,7 +103,7 @@ const Header = () => {
 	return (
 		<>
 			<header
-				className={`${styles.header} bg-white dark:bg-[#191919] border-b border-[#00000017] dark:border-[#ffffff0c] `}
+				className={`${styles.header} bg-white dark:bg-[#151b31] border-b border-[#00000017] dark:border-[#ffffff0c] `}
 			>
 				{
 					<Link href='/'>
@@ -153,11 +146,7 @@ const Header = () => {
 								<Dropdown type='explorer' trigger='hover' />
 							</li>
 
-							<li>
-								<Link href='/#faq' className={styles.link}>
-									FAQ
-								</Link>
-							</li>
+
 						</ul>
 					</nav>
 
@@ -243,40 +232,14 @@ const Header = () => {
 						</div>
 					</button>
 
-					<div className='divider-vertical hidden lg:block'></div>
 
-					<div className='hidden gap-3 lg:flex'>
-						<a href='https://t.me/itrocket_en' target='_blank' rel='noopener noreferrer'>
-							<Image src='/icons/tg.svg' alt='telegram' width={30} height={30} />
-						</a>
-
-						<a href='https://twitter.com/itrocket_team' target='_blank' rel='noopener noreferrer'>
-							<Image src='/icons/twitter.svg' alt='twitter' width={30} height={30} />
-						</a>
-						<a
-							href='https://github.com/itrocket-am'
-							target='_blank'
-							rel='noopener noreferrer'
-							style={{ display: theme === 'light' ? 'block' : 'none' }}
-						>
-							<Image src='/icons/github.svg' alt='github' width={30} height={30} />
-						</a>
-						<a
-							href='https://github.com/itrocket-am'
-							target='_blank'
-							rel='noopener noreferrer'
-							style={{ display: theme !== 'light' ? 'block' : 'none' }}
-						>
-							<Image src='/icons/github-white.svg' alt='github' width={30} height={30} />
-						</a>
-					</div>
 				</div>
 			</header>
 
 			<motion.div
 				className={styles.burgerMenu}
 				style={{
-					backgroundColor: theme === 'dark' ? '#161616' : '#fff',
+					backgroundColor: theme === 'dark' ? '#0e121f' : '#fff',
 					display: isOpen ? 'flex' : 'none'
 				}}
 				initial='hidden'

@@ -11,7 +11,7 @@ const parseTime = snapTime => {
 }
 
 const PublicRPC = ({ data, projectName, type }) => {
-	const dynamicLink = `https://${type}-files.itrocket.net/${projectName}/.rpc_combined.json`
+	const dynamicLink = `https://${type}-files.zknodes.org/${projectName}/.rpc_combined.json`
 
 	const dataArray = Object.keys(data).map((key, index) => ({
 		key: index,

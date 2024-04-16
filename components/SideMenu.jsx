@@ -64,13 +64,6 @@ const SideMenu = () => {
 		)
 	}
 
-	// const handleTabClick = value => {
-	// 	setValue(value)
-	// 	setSelectedKeys([])
-	// 	const href = `/services/${value}/${curProject.current}`
-	// 	router.push(href)
-	// }
-
 	const openKeysByURL = URL => {
 		if (URL.indexOf('installation') > -1) setOpenKeys([`installation`])
 		else if (URL.indexOf('upgrade') > -1) setOpenKeys([`upgrade`])
@@ -696,14 +689,6 @@ const SideMenu = () => {
 							: null,
 						getItem(
 							<div className='mb-2'>
-								<a
-									className='font-normal text-sm dark:text-[#a7a7a7]'
-									href={`https://t.me/itrocket_${type}_proposal_bot`}
-									target='_blank'
-									rel='noopener noreferrer'
-								>
-									<span className='mr-2 ml-3'> 🤖</span> Proposal bot
-								</a>
 							</div>,
 							'public rpc',
 							null,

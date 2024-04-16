@@ -43,7 +43,7 @@
 	&__dark {
 		@include button;
 		color: #e9eef2;
-		background-color: #424242;
+		background-color: #0e121f;
 		border-color: rgba(240, 246, 252, 0.1);
 		font-size: 17px;
 
@@ -52,8 +52,8 @@
 		}
 
 		&:hover {
-			background-color: #494949;
-			border-color: #8d949e;
+			background-color: #0e121f;
+			border-color: #161d31;
 		}
 	}
 }
