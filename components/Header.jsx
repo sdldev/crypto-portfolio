@@ -14,14 +14,7 @@ const Header = () => {
 	const [accordionOpen, setAccordionOpen] = useState(false)
 
 	const mobileLinks = [
-		<Link
-			href='/#networks'
-			onClick={() => {
-				setIsOpen(!isOpen)
-			}}
-		>
-			Networks
-		</Link>,
+
 		<Link
 			href='/services'
 			onClick={() => {
@@ -132,11 +125,7 @@ const Header = () => {
 				<div className={styles.headerNav__wrapper}>
 					<nav className={styles.headerNav}>
 						<ul className={theme === 'light' ? 'light' : 'dark'}>
-							<li>
-								<Link href='/#networks' className={styles.link}>
-									Networks
-								</Link>
-							</li>
+
 							<li>
 								<Link href='/services' className={styles.link}>
 									Services
